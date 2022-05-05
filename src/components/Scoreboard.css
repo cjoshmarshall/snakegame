@@ -9,14 +9,21 @@
 
 .scoreboard_lists{
     font-size: larger;
-    padding: 0 120px;
+    padding: 0 140px;
 }
 
 .scoreboard_list{
-    /* display: flex;
-    justify-content: space-between; */
+    display: list-item;
+    justify-content: space-between;
     margin: 10px 0;
-    padding: 0;
+    /* padding: 0; */
+    width: 100px;
+}
+.scoreboard_list>div{
+    display:flex;
+    justify-content: space-between;
+    /* margin: 50px; */
+    /* width: 100px; */
 }
 
 @media only screen and (max-width: 700px) {

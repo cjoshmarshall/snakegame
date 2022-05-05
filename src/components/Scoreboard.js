@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { publicRequest } from './apiHandle'
+import React from 'react'
 import "./Scoreboard.css"
 
-function Scoreboard({scoreboard}) {
- 
+function Scoreboard({scoreboard}){
+
   return (
     <div className='scoreboard'>
         <h2 className='scoreboard_title'>Scoreboard</h2>
@@ -12,8 +11,10 @@ function Scoreboard({scoreboard}) {
             <ol className='scoreboard_lists'>
                 {scoreboard.map(item=>(
                 <li className='scoreboard_list' key={item._id}>
+                  <div>
                     <span>{item.user}</span>
                     <span>{item.score}</span>
+                  </div>
                 </li>
                 )).slice(0,5)}
             </ol>:

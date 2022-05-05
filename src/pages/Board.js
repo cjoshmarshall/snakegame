@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { randomIntFromInterval, useInterval } from './utility.js';
+import { randomIntFromInterval, useInterval } from '../utility.js';
 import './Board.css';
-import Scoreboard from './Scoreboard.js';
-import User from './User.js';
-import { publicRequest } from './apiHandle.js';
+import Scoreboard from '../components/Scoreboard.js';
+import User from '../components/User.js';
+import { publicRequest } from '../api/apiHandle.js';
 
 class LinkedListNode {
   constructor(value) {
@@ -158,17 +158,19 @@ const Board=()=>{
     setScore(score+1)
   };
 
+  
+  const scores=scoreboard.map(item=>item.score)
+  const leastscore=Math.min(...scores)
+
   const handleGameOver=()=>{
     setGameover(true)
-    if(score>scoreboard.map(item=>item.score)){
-      document.getElementById("overlay").style.display="block";
-    }else{
+    if(score<leastscore){
       document.getElementById("overlay").style.display="none";
+    }else{
+      document.getElementById("overlay").style.display="block";
     }
   };
 
-  console.log(score)
-  console.log(scoreboard)
   
 
   
