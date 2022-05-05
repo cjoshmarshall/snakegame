@@ -1,0 +1,32 @@
+.scoreboard_title{
+    text-align: center;
+}
+
+.scoreboard_container{
+    display: block;
+    /* text-align: center; */
+}
+
+.scoreboard_lists{
+    font-size: larger;
+    padding: 0 120px;
+}
+
+.scoreboard_list{
+    /* display: flex;
+    justify-content: space-between; */
+    margin: 10px 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .scoreboard_title{
+        margin-top: 40px;
+    }
+    
+    .scoreboard_lists{
+        padding: 0 250px;
+    }
+
+  }
+  
